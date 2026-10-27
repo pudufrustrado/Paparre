@@ -1,7 +1,32 @@
 # Sesión 1: XML de los 12 vídeos ligeros (Pascual Ariño)
 
 **Archivo:** `Pascual_Sesion1_12_Videos_Ligeros_1080x1920.xml` (FCP7 `xmeml` v4 para Premiere Pro)
-Contiene una bin con **20 secuencias**: las 15 del brief más 5 alternativas (`-ALT`). Todas son 1080x1920, 25 fps y píxel cuadrado.
+Contiene una bin con **2 secuencias** (1080x1920, 25 fps, píxel cuadrado). Dentro de cada una, los reels van seguidos con **2 s de negro** entre ellos. Al inicio de cada reel hay un marcador con su nombre, las 3 opciones de header y la nota de montaje, y cada empalme interno lleva un marcador `· CORTE`.
+
+**`PASCUAL S1 - 15 REELS (MASTER)`** (duración 10:39). Posición de cada reel en la línea de tiempo (mm:ss:ff):
+
+| Reel | Inicio | Fin | Reel | Inicio | Fin |
+|---|---|---|---|---|---|
+| 01 | 00:00:00 | 00:15:21 | 07C | 04:33:00 | 05:13:19 |
+| 02 | 00:17:21 | 00:30:06 | 08 | 05:15:19 | 06:07:08 |
+| 03 | 00:32:06 | 00:55:10 | 09 | 06:09:08 | 06:50:16 |
+| 04 | 00:57:10 | 01:50:17 | 10 | 06:52:16 | 07:43:10 |
+| 05 | 01:52:17 | 02:14:22 | 11 | 07:45:10 | 08:19:19 |
+| 06 | 02:16:22 | 02:48:11 | 12A | 08:21:19 | 09:33:19 |
+| 07A | 02:50:11 | 03:35:22 | 12B | 09:35:19 | 10:39:04 |
+| 07B | 03:37:22 | 04:31:00 | | | |
+
+**`PASCUAL S1 - ALTERNATIVAS (ALT)`** (duración 1:52):
+
+| Reel | Inicio | Fin |
+|---|---|---|
+| 01-ALT | 00:00:00 | 00:10:19 |
+| 02-ALT | 00:12:19 | 00:28:02 |
+| 06-ALT | 00:30:02 | 00:55:15 |
+| 10-ALT | 00:57:15 | 01:27:21 |
+| 11-ALT | 01:29:21 | 01:52:20 |
+
+Para exportar cada reel: marca In/Out sobre sus límites (o usa los marcadores) y exporta el rango.
 
 ## Cómo está armado cada reel
 | Pista | Contenido |
