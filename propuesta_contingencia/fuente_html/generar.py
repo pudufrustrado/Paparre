@@ -199,7 +199,7 @@ pieces["04_D04_convocatoria_asamblea"] = page(f"""
 
 # ---------------------------------------------------------------- D-05
 pieces["05_D05_lista_lima_inscrita"] = page(f"""
-<div class="photo" style="right:0;top:150px;width:600px;height:930px;background-image:url({MUNOZ});background-position:70% top;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 42%),linear-gradient(to top,transparent 0,#000 22%);-webkit-mask-composite:source-in"></div>
+<div class="photo" style="right:0;top:130px;width:580px;height:690px;background-image:url(../assets/munoz_busto.jpg);background-size:cover;background-position:center top;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 24%),linear-gradient(to top,transparent 0,#000 24%);-webkit-mask-composite:source-in"></div>
 {logo("corner")}
 <div class="abs" style="left:64px;top:190px"><span class="tag navy big">Lima · Consejo Regional III</span></div>
 <div class="abs" style="left:64px;top:256px">{hl(["¡Es", "oficial!"], "xl", "left")}</div>
@@ -382,10 +382,10 @@ for i, e in enumerate(EJES, 1):
 
 
 def eje_row(n, t, d):
-    return f"""<div class="card row" style="gap:28px;align-items:center;padding:28px 34px">
-  <div style="flex:none;width:96px;height:96px;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:60px">{n}</div>
-  <div><div style="font-weight:900;font-size:32px;letter-spacing:-.3px">{t}</div>
-  <div class="body" style="font-size:23px;margin-top:6px">{d}</div></div>
+    return f"""<div class="card row" style="gap:32px;align-items:center;padding:28px 38px">
+  <div style="flex:none;width:112px;height:112px;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:70px">{n}</div>
+  <div><div style="font-weight:900;font-size:37px;letter-spacing:-.4px">{t}</div>
+  <div class="body" style="font-size:26px;margin-top:8px">{d}</div></div>
 </div>"""
 
 
@@ -393,7 +393,7 @@ pieces["08_D08_ejes_lima_resumen"] = page(f"""
 {logo()}
 <div class="kicker" style="margin-top:28px">Consejo Regional III · Lima</div>
 <div style="margin-top:16px">{hl(["3 ejes para", "cambiar Lima"], "md")}</div>
-<div class="abs" style="left:64px;right:64px;top:600px;display:flex;flex-direction:column;gap:22px">
+<div class="abs" style="left:64px;right:64px;top:480px;display:flex;flex-direction:column;gap:22px">
   {eje_row(1, "Defensa legal permanente", "Asesoría para médicos jóvenes y especialistas.")}
   {eje_row(2, "Cuentas claras en el CR III", "Transparencia financiera y rendición de cuentas.")}
   {eje_row(3, "Bienestar médico", "Salud ocupacional y capacitación continua.")}
