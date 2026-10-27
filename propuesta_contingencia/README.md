@@ -9,6 +9,9 @@ Esta propuesta sigue la línea gráfica aprobada en la serie 01–24: fondo clar
 - `png/`: los PNG sueltos.
 - `fuente_html/`: las fuentes editables. Corre `python3 generar.py` y luego `node render.js`.
 
+## Pronunciamiento (27 oct 2026)
+En `pronunciamiento/` están las 2 imágenes en Poppins Medium/Light y su especificación tipográfica (`especificacion_tipografica.md`).
+
 ## Piezas
 | # | Código | Pieza | Eje |
 |---|---|---|---|
@@ -40,6 +43,6 @@ Decisiones tomadas:
 - **Secretaría del Médico Joven**: la publicación oficial dice "Dra. Jelsy Sánchez Villogas", pero `req 5` dice "Dr. Víctor Hernández". En el carrusel usé el nombre oficial, con la foto pendiente.
 - **D-05**: la publicación indica que las listas "han superado la etapa de depuración" y que admite tachas hasta el 28 de octubre. Conviene publicar "¡Es oficial!" después de esa fecha, o suavizar el texto.
 - **Cargo de Tarazona**: el plan dice "Coordinador Nacional" y las piezas previas, "Decano Nacional".
-- **D-02**: el plan dice "de 428 firmas… solo validaron 7 y anularon el 70%". 7 de 428 es el 1,6% validado, así que el "70% anulado" no cuadra con esa cifra. Hay que confirmar los dos números.
-- **D-01**: el cuerpo del comunicado es un borrador de redacción y necesita la aprobación del Dr. Tarazona.
+- **D-02**: se actualizó con las cifras del pronunciamiento del 27 de octubre (5,200 presentadas, 3,632 exigidas, casi 2,000 invalidadas y 98 % del paquete de 428). Se retiró el desglose Lima/Regiones (2,952 + 2,239 = 5,191), porque ya no cuadra con el total de 5,200.
+- **D-01**: el cuerpo se alineó con el pronunciamiento (documento impugnatorio ante el Jurado Electoral Nacional del CMP, 5,200 firmas). Sigue siendo un borrador que debe aprobar el Dr. Tarazona.
 - **"Lista N"**: se mantiene como marcador hasta el sorteo del 4 de noviembre, igual que en la serie aprobada.

@@ -225,3 +225,22 @@ body {
   box-shadow: 0 6px 18px rgba(1,41,111,.12);
 }
 .swipe { font-weight: 800; font-size: 24px; letter-spacing: .5px; }
+
+/* ---------- Pronunciamiento: sistema Poppins (Medium 500 / Light 300) ---------- */
+.pp, .pp * { font-family: 'Poppins', sans-serif; }
+.pp .m { font-weight: 500; }
+.pp .l { font-weight: 300; }
+.pp .foot { font-weight: 500; }
+.pp .hlp { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pp .hlp span {
+  display: inline-block; background: var(--yellow); color: var(--navy-ink);
+  font-weight: 500; text-transform: uppercase; font-size: 52px; line-height: 1.12;
+  padding: 6px 22px 4px; letter-spacing: -.5px;
+}
+.pp .stat { border-radius: 24px; padding: 24px 28px; }
+.pp .stat .num { font-weight: 500; font-size: 84px; line-height: 1; letter-spacing: -2px; }
+.pp .stat .lab { font-weight: 300; font-size: 25px; line-height: 1.3; margin-top: 8px; }
+.pp .stat.neg { background: var(--navy); color: #fff; box-shadow: 0 18px 40px rgba(1,41,111,.25); }
+.pp .stat.neg .num { color: var(--yellow); }
+.pp p.txt { font-weight: 300; font-size: 24.5px; line-height: 1.5; text-align: left; }
+.pp p.txt b { font-weight: 500; }

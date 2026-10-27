@@ -91,29 +91,29 @@ pieces["01_D01_comunicado_apelacion"] = page(f"""
 {logo()}
 <div class="kicker" style="margin-top:34px">Comunicado oficial</div>
 <div style="margin-top:18px">{hl(["La verdad y la razón", "están con nosotros"], "md")}</div>
-<div class="center h2" style="margin:34px 90px 0;font-size:38px;line-height:1.2">
-  Presentamos apelación con sólidos argumentos ante el Jurado Electoral
+<div class="center h2" style="margin:34px 110px 0;font-size:36px;line-height:1.2">
+  Presentamos un documento impugnatorio ante el Jurado Electoral Nacional del CMP
 </div>
 <div class="card abs" style="left:64px;right:64px;top:700px;padding:44px 48px 44px">
   <p class="body" style="font-size:27px">
-    <b>Fortaleza Médica</b> ingresó formalmente su apelación para defender la
-    participación de nuestra <b>Lista Nacional</b>. Lo hacemos con serenidad, con
-    firmeza jurídica y con el respaldo de las firmas de miles de médicos del Perú.
-    Confiamos en que se resolverá conforme a derecho.
+    <b>Fortaleza Médica</b> defiende la participación de su <b>Lista Nacional</b>,
+    respaldada por <b>5,200 firmas</b> de médicos de todo el país. Exigimos una
+    explicación técnica documentada y la revisión transparente de las firmas
+    observadas.
   </p>
   <div class="sign" style="margin-top:28px">
     <div class="n">Dr. Augusto Tarazona</div>
     <div class="r">Coordinador Nacional · Fortaleza Médica</div>
   </div>
 </div>
-{seal("right:40px;top:560px;transform:rotate(-12deg)", 170, 1)}
+{seal("right:34px;top:600px;transform:rotate(-12deg)", 150, 1)}
 <div class="abs center" style="left:0;right:0;bottom:104px;font-weight:800;font-size:28px;letter-spacing:.5px">
   #EnDefensaDelVotoMédico
 </div>
 """)
 
 # ---------------------------------------------------------------- D-02
-def bar_row(label, req, pres, maxv=5191):
+def bar_row(label, req, pres, maxv=5200):
     pct = round((pres / req - 1) * 100)
     wr = req / maxv * 100
     wp = pres / maxv * 100
@@ -137,20 +137,26 @@ pieces["02_D02_infografia_firmas"] = page(f"""
 <div class="abs" style="top:66px;right:56px"><span class="tag navy big">Transparencia</span></div>
 <div style="margin-top:210px">{hl(["Los números reales", "de nuestras firmas"], "md")}</div>
 <div class="card abs" style="left:64px;right:64px;top:430px;padding:34px 40px 10px">
-  {bar_row("Nacional", 3632, 5191)}
-  {bar_row("Lima", 2180, 2952)}
-  {bar_row("Regiones", 1452, 2239)}
-</div>
-<div class="abs row" style="left:64px;right:64px;top:1004px;background:var(--navy);color:#fff;border-radius:22px;padding:24px 30px;gap:22px;align-items:center">
-  {ICON["alert"]}
-  <div style="font-weight:600;font-size:23px;line-height:1.3">
-    De <b class="yl" style="font-weight:900">428 firmas</b> de Lima en segunda entrega, solo validaron
-    <b class="yl" style="font-weight:900">7</b> y anularon el <b class="yl" style="font-weight:900">70%</b>
-    sin justificación técnica válida.
+  {bar_row("Firmas de respaldo", 3632, 5200)}
+  <div style="border-top:2px solid #E3E8F3;margin:4px 0 0;padding:26px 0 30px" class="row">
+    <div style="flex:none;padding-right:30px;border-right:3px solid var(--yellow)">
+      <div style="font-weight:700;font-size:24px">casi</div>
+      <div style="font-weight:900;font-size:96px;line-height:.95;letter-spacing:-3px;color:var(--red)">2,000</div>
+    </div>
+    <div style="padding-left:30px;align-self:center">
+      <div style="font-weight:800;font-size:32px;line-height:1.15">firmas invalidadas</div>
+      <div class="body" style="font-size:23px;margin-top:8px">mediante un procedimiento cuyos criterios no han sido explicados de manera clara, suficiente y verificable.</div>
+    </div>
   </div>
 </div>
-<div class="abs center" style="left:60px;right:60px;bottom:96px;font-weight:800;font-size:28px;line-height:1.25">
-  Exigimos transparencia y respeto a las firmas<br>de los médicos del Perú
+<div class="abs row" style="left:64px;right:64px;top:852px;background:var(--navy);color:#fff;border-radius:22px;padding:24px 30px;gap:22px;align-items:center">
+  {ICON["alert"]}
+  <div style="font-weight:600;font-size:23px;line-height:1.3">
+    De un paquete de <b class="yl" style="font-weight:900">428 firmas</b> entregadas, se invalidó el
+    <b class="yl" style="font-weight:900">98 %</b> sin justificación sustentada y comunicada.
+  </div>
+</div>
+<div class="abs" style="left:0;right:0;bottom:118px">{hl(["Exigimos transparencia", "y respeto a las firmas", "de los médicos del Perú"], "sm")}
 </div>
 """)
 
@@ -433,6 +439,52 @@ pieces["10_D09B_cierre_filas_lima"] = page(f"""
 </div>
 {pill("lima")}
 """, dark=True)
+
+
+# ---------------------------------------------------------------- Pronunciamiento (27 oct 2026)
+# Tipografía: Poppins Medium (500) = títulos, cifras, porcentajes y frases destacadas
+#             Poppins Light (300)  = cuerpos de texto y párrafos descriptivos
+def ppage(body):
+    return page(body).replace('<div class="canvas">', '<div class="canvas pp">')
+
+
+pieces["00_Pronunciamiento_1-2_cifras"] = ppage(f"""
+{logo()}
+<div class="hlp" style="margin-top:34px">
+  <span>La democracia institucional</span><span>exige transparencia</span><span>y respeto</span>
+</div>
+<div class="abs" style="left:64px;right:64px;top:490px;display:grid;grid-template-columns:1fr 1fr;gap:22px">
+  <div class="card stat"><div class="num">5,200</div><div class="lab">firmas de respaldo presentadas</div></div>
+  <div class="card stat"><div class="num">3,632</div><div class="lab">firmas exigidas</div></div>
+  <div class="stat neg"><div class="lab" style="margin:0 0 4px">casi</div><div class="num">2,000</div><div class="lab">firmas invalidadas</div></div>
+  <div class="stat neg"><div class="lab" style="margin:0 0 8px">de 428 firmas entregadas, se invalidó el</div><div class="num">98 %</div></div>
+</div>
+<div class="abs center" style="left:84px;right:84px;top:960px;font-weight:300;font-size:27px;line-height:1.45">
+  Expresamos nuestra profunda preocupación ante la decisión de excluir a la lista <b class="m">FORTALEZA MÉDICA</b> del proceso electoral del Colegio Médico del Perú.
+</div>
+<div class="abs row" style="left:64px;right:64px;bottom:96px;justify-content:space-between;align-items:center">
+  <div style="font-weight:300;font-size:21px">Lima, 27 de octubre del 2026 · <b class="m">Comité Ejecutivo Nacional</b></div>
+  <div class="m" style="font-size:22px">Pronunciamiento 1/2 →</div>
+</div>
+""")
+
+pieces["00_Pronunciamiento_2-2_texto"] = ppage(f"""
+{logo("corner")}
+<div class="abs" style="top:62px;right:56px"><span class="tag navy big m" style="font-weight:500">Pronunciamiento 2/2</span></div>
+<div class="abs" style="left:64px;right:64px;top:178px;display:flex;flex-direction:column;gap:15px">
+  <p class="txt">Habiendo presentado <b>5,200 firmas de respaldo</b>, frente a las <b>3,632 exigidas</b>, resulta preocupante que <b>casi 2,000</b> hayan sido invalidadas mediante un procedimiento cuyos criterios y fundamentos no han sido explicados de manera clara, suficiente y verificable en los documentos que nos han hecho entrega. Como ejemplo, de un paquete de <b>428 firmas</b> entregadas, se han invalidado el <b>98 %</b> de ellas sin justificación sustentada y comunicada.</p>
+  <p class="txt">Como <b>FORTALEZA MÉDICA</b> recogimos firmas cara a cara, con ética y honestidad, recorriendo hospitales y centros de salud de todo el país. Nuestro respaldo es auténtico, exclusivo y creciente porque nace de la confianza de miles de colegas médicos. <b>No cuestionamos la obligación de verificar las firmas. Cuestionamos la falta de transparencia que compromete la confianza en el proceso electoral.</b> La democracia institucional exige reglas claras, debido procedimiento y respeto a los derechos de participación de los colegiados.</p>
+  <p class="txt">Por ello, <b>hemos presentado un documento impugnatorio ante el Jurado Electoral Nacional del CMP</b>, y exigimos una explicación técnica documentada, la revisión transparente de las firmas observadas y las garantías necesarias para un proceso electoral legítimo y justo, con igualdad de oportunidades para todos.</p>
+  <p class="txt">Como médicos, defendemos <b>la ética, la justicia y la transparencia</b>, por lo que nuestro Colegio debe ser ejemplo de estos principios.</p>
+  <div style="background:var(--yellow);padding:16px 24px;margin-top:4px">
+    <div class="m" style="font-size:27px;line-height:1.35;color:var(--navy-ink)">¡Que sean los médicos, a través de su voto, quienes decidan quien debe asumir la conducción de nuestro Colegio Médico!</div>
+  </div>
+  <div style="text-align:right;margin-top:6px">
+    <div class="l" style="font-size:21px">Lima, 27 de octubre del 2026</div>
+    <div class="m" style="font-size:25px">Comité Ejecutivo Nacional</div>
+  </div>
+</div>
+""")
 
 
 for name, html in pieces.items():
