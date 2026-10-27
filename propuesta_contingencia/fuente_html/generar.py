@@ -103,7 +103,7 @@ pieces["01_D01_comunicado_apelacion"] = page(f"""
   </p>
   <div class="sign" style="margin-top:28px">
     <div class="n">Dr. Augusto Tarazona</div>
-    <div class="r">Coordinador Nacional · Fortaleza Médica</div>
+    <div class="r">Candidato a Decano Nacional · Fortaleza Médica</div>
   </div>
 </div>
 {seal("right:34px;top:600px;transform:rotate(-12deg)", 150, 1)}
@@ -175,7 +175,7 @@ pieces["03_D03_quote_rpp_tarazona"] = page(f"""
 </div>
 <div class="abs sign" style="left:64px;bottom:110px">
   <div class="n" style="font-size:30px">Dr. Augusto Tarazona</div>
-  <div class="r" style="font-size:22px">Médico Infectólogo · Exviceministro de Salud<br>Coordinador Nacional de Fortaleza Médica</div>
+  <div class="r" style="font-size:22px">Médico Infectólogo · Exviceministro de Salud<br>Candidato a Decano Nacional</div>
 </div>
 """)
 
@@ -242,7 +242,7 @@ pieces["06_D06_dupla_munoz_tarazona"] = page(f"""
   </div>
   <div class="abs" style="right:40px;bottom:-4px;width:470px;padding:16px 22px;background:var(--navy);color:#fff;border-left:8px solid var(--yellow)">
     <div style="font-weight:800;font-size:27px">Dr. Augusto Tarazona</div>
-    <div style="font-weight:500;font-size:19px">Coordinador Nacional</div>
+    <div style="font-weight:500;font-size:19px">Candidato a Decano Nacional</div>
   </div>
 </div>
 <div class="abs center" style="left:0;right:0;bottom:84px;height:62px;line-height:62px;font-weight:900;font-size:30px">
@@ -479,9 +479,15 @@ pieces["00_Pronunciamiento_2-2_texto"] = ppage(f"""
   <div style="background:var(--yellow);padding:16px 24px;margin-top:4px">
     <div class="m" style="font-size:27px;line-height:1.35;color:var(--navy-ink)">¡Que sean los médicos, a través de su voto, quienes decidan quien debe asumir la conducción de nuestro Colegio Médico!</div>
   </div>
-  <div style="text-align:right;margin-top:6px">
-    <div class="l" style="font-size:21px">Lima, 27 de octubre del 2026</div>
-    <div class="m" style="font-size:25px">Comité Ejecutivo Nacional</div>
+  <div class="row" style="justify-content:space-between;align-items:flex-end;margin-top:8px">
+    <div class="sign" style="border-left-width:5px">
+      <div class="m" style="font-size:25px">Dr. Augusto Tarazona</div>
+      <div class="m" style="font-size:21px">Candidato a Decano Nacional</div>
+    </div>
+    <div style="text-align:right">
+      <div class="l" style="font-size:21px">Lima, 27 de octubre del 2026</div>
+      <div class="m" style="font-size:25px">Comité Ejecutivo Nacional</div>
+    </div>
   </div>
 </div>
 """)

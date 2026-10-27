@@ -42,7 +42,7 @@ Decisiones tomadas:
 ## Verificar antes de publicar
 - **Secretaría del Médico Joven**: la publicación oficial dice "Dra. Jelsy Sánchez Villogas", pero `req 5` dice "Dr. Víctor Hernández". En el carrusel usé el nombre oficial, con la foto pendiente.
 - **D-05**: la publicación indica que las listas "han superado la etapa de depuración" y que admite tachas hasta el 28 de octubre. Conviene publicar "¡Es oficial!" después de esa fecha, o suavizar el texto.
-- **Cargo de Tarazona**: el plan dice "Coordinador Nacional" y las piezas previas, "Decano Nacional".
+- **Cargo de Tarazona**: ahora es "Candidato a Decano Nacional" en todas las piezas (D-01, D-03, D-06 y la firma del pronunciamiento).
 - **D-02**: se actualizó con las cifras del pronunciamiento del 27 de octubre (5,200 presentadas, 3,632 exigidas, casi 2,000 invalidadas y 98 % del paquete de 428). Se retiró el desglose Lima/Regiones (2,952 + 2,239 = 5,191), porque ya no cuadra con el total de 5,200.
 - **D-01**: el cuerpo se alineó con el pronunciamiento (documento impugnatorio ante el Jurado Electoral Nacional del CMP, 5,200 firmas). Sigue siendo un borrador que debe aprobar el Dr. Tarazona.
 - **"Lista N"**: se mantiene como marcador hasta el sorteo del 4 de noviembre, igual que en la serie aprobada.
