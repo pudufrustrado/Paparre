@@ -82,7 +82,7 @@ ICON = {
 TARAZONA = "../assets/tarazona.jpg"
 MUNOZ = "../assets/munoz.jpg"
 FALERO = "../assets/falero.jpg"
-SOTO = "../assets/soto_provisional.jpg"
+L = "../assets/lima/"
 
 pieces = {}
 
@@ -201,22 +201,22 @@ pieces["04_D04_convocatoria_asamblea"] = page(f"""
 pieces["05_D05_lista_lima_inscrita"] = page(f"""
 <div class="photo" style="right:0;top:150px;width:600px;height:930px;background-image:url({MUNOZ});background-position:70% top;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 42%),linear-gradient(to top,transparent 0,#000 22%);-webkit-mask-composite:source-in"></div>
 {logo("corner")}
-<div class="abs" style="left:64px;top:230px"><span class="tag navy big">Lima · Consejo Regional III</span></div>
-<div class="abs" style="left:64px;top:300px">{hl(["¡Es", "oficial!"], "xl", "left")}</div>
-<div class="abs h2" style="left:64px;top:610px;width:560px;font-size:40px;line-height:1.18">
+<div class="abs" style="left:64px;top:190px"><span class="tag navy big">Lima · Consejo Regional III</span></div>
+<div class="abs" style="left:64px;top:256px">{hl(["¡Es", "oficial!"], "xl", "left")}</div>
+<div class="abs h2" style="left:64px;top:560px;width:560px;font-size:38px;line-height:1.18">
   La Lista Regional de Lima encabezada por el <span style="background:linear-gradient(transparent 62%,var(--yellow) 62%)">Dr. Danny Muñoz</span> está inscrita y lista para el cambio
 </div>
-<div class="abs" style="left:64px;top:880px;width:460px;height:210px;transform:rotate(-3deg)">
-  <div class="card" style="padding:12px;height:100%;border-radius:12px">
-    {ph("Recorte El Peruano", "Resolución de inscripción · Lista CR III Lima", "height:100%;border-radius:6px;background:linear-gradient(160deg,#F1F1EE,#DCDCD6)")}
+<div class="abs" style="left:56px;top:792px;width:500px;height:300px;transform:rotate(-2deg)">
+  <div class="card" style="padding:10px;height:100%;border-radius:10px;box-shadow:0 18px 40px rgba(1,41,111,.22)">
+    <div style="height:100%;border-radius:4px;background:#ECEAE4 url(../assets/publicacion_lima.jpg) center/contain no-repeat"></div>
   </div>
   <div class="abs" style="right:-34px;top:-34px;width:96px;height:96px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.2))">{ICON["check"]}</div>
 </div>
-<div class="abs" style="right:64px;top:900px;width:350px">
+<div class="abs" style="right:56px;top:880px;width:380px">
   <div class="card center" style="padding:22px 20px">
-    <div style="font-weight:800;font-size:21px;letter-spacing:.5px">PUBLICADA EN</div>
-    <div style="font-weight:900;font-size:34px;margin-top:4px">El Peruano</div>
-    <div style="font-weight:600;font-size:18px;margin-top:4px">[fecha de publicación]</div>
+    <div style="font-weight:800;font-size:20px;letter-spacing:.5px">PUBLICACIÓN OFICIAL</div>
+    <div style="font-weight:900;font-size:28px;margin-top:6px;line-height:1.1">Jurado Electoral<br>Regional CR III</div>
+    <div style="font-weight:600;font-size:19px;margin-top:6px">Periodo 2027 – 2030</div>
   </div>
 </div>
 {pill("lima")}
@@ -245,33 +245,30 @@ pieces["06_D06_dupla_munoz_tarazona"] = page(f"""
 """)
 
 # ---------------------------------------------------------------- D-07 carrusel
-def ficha(role, name, spec, line, photo=None):
+# Equipo según la publicación del Jurado Electoral Regional CR III (listas lima.jpeg)
+def miembro(photo, name, role):
     if photo:
-        img = f'<div style="width:250px;height:300px;border-radius:20px;background:url({photo}) center 0/cover;flex:none"></div>'
+        img = f'<div style="width:210px;height:236px;border-radius:18px;background:url({photo}) center 0/cover;margin:0 auto"></div>'
     else:
-        img = ph("Foto", "recorte", "width:250px;height:300px;border-radius:20px;flex:none", person=True)
-    return f"""<div class="card row" style="gap:30px;align-items:center;padding:26px">
+        img = ph("Foto", "pendiente", "width:210px;height:236px;border-radius:18px;margin:0 auto", person=True)
+    return f"""<div class="card center" style="padding:24px 20px 22px">
   {img}
-  <div>
-    <span class="tag" style="font-size:19px">{role}</span>
-    <div style="font-weight:900;font-size:36px;margin-top:14px;line-height:1.08;letter-spacing:-.5px">{name}</div>
-    <div style="font-weight:700;font-size:23px;margin-top:8px;color:var(--purple)">{spec}</div>
-    <div class="body" style="font-size:22px;margin-top:10px">{line}</div>
-  </div>
+  <div style="font-weight:900;font-size:29px;margin-top:16px;line-height:1.08;letter-spacing:-.3px">{name}</div>
+  <div class="tag" style="font-size:16px;margin-top:10px;line-height:1.25">{role}</div>
 </div>"""
 
 
-def ficha_page(n, a, b):
+def grid_page(n, title, members):
+    cards = "\n  ".join(miembro(*m) for m in members)
     return page(f"""
 {logo("corner")}
 <div class="page">Equipo Lima · {n} de 5</div>
-<div class="kicker" style="margin-top:190px;text-align:left;padding-left:64px;font-size:32px">Conoce al equipo de Lima</div>
-<div style="padding:16px 64px 0">{hl(["Experiencia que respalda"], "sm", "left")}</div>
-<div class="abs" style="left:64px;right:64px;top:410px;display:flex;flex-direction:column;gap:26px">
-  {a}
-  {b}
+<div class="kicker" style="margin-top:184px;text-align:left;padding-left:64px;font-size:30px">Comité Ejecutivo Regional III · Lima</div>
+<div style="padding:14px 64px 0">{hl([title], "sm", "left")}</div>
+<div class="abs" style="left:64px;right:64px;top:390px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+  {cards}
 </div>
-<div class="abs swipe" style="right:64px;bottom:96px">Desliza →</div>
+<div class="abs swipe" style="right:64px;bottom:90px">Desliza →</div>
 """)
 
 
@@ -289,15 +286,37 @@ pieces["07_D07_equipo_lima_1-5_portada"] = page(f"""
 </div>
 """)
 
-pieces["07_D07_equipo_lima_2-5"] = ficha_page(2,
-    ficha("Secretaría General", "Dra. Judith Falero", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]", FALERO),
-    ficha("Finanzas", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"))
-pieces["07_D07_equipo_lima_3-5"] = ficha_page(3,
-    ficha("Ética", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"),
-    ficha("Asuntos Contenciosos", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"))
-pieces["07_D07_equipo_lima_4-5"] = ficha_page(4,
-    ficha("Acción Médica", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"),
-    ficha("Incidencia en Salud Pública", "Dr. Leslie Soto", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]", SOTO))
+pieces["07_D07_equipo_lima_2-5"] = grid_page(2, "Experiencia que respalda", [
+    (FALERO, "Dra. Judith Falero", "Secretaría General"),
+    (L + "rodriguez.jpg", "Dr. Junnyor Rodríguez", "Economía y Finanzas"),
+    (L + "vasquez.jpg", "Dra. Eva Vásquez", "Desarrollo Profesional<br>y Científico"),
+    (L + "soto_t.jpg", "Dr. Leslie Soto", "Incidencia en<br>Salud Pública"),
+])
+pieces["07_D07_equipo_lima_3-5"] = grid_page(3, "Ética, defensa y gestión", [
+    (L + "calvo.jpg", "Dr. Armando Calvo", "Ética y Deontología"),
+    (L + "zorrilla.jpg", "Dr. Loel Zorrilla", "Asuntos Contenciosos<br>y Administrativos"),
+    (L + "vargas.jpg", "Dra. Karin Vargas", "Administración"),
+    (None, "Dra. Jelsy Sánchez", "Médico Joven"),
+])
+pieces["07_D07_equipo_lima_4-5"] = page(f"""
+{logo("corner")}
+<div class="page">Equipo Lima · 4 de 5</div>
+<div class="kicker" style="margin-top:184px;text-align:left;padding-left:64px;font-size:30px">Comité Ejecutivo Regional III · Lima</div>
+<div style="padding:14px 64px 0">{hl(["Un equipo completo"], "sm", "left")}</div>
+<div class="abs" style="left:64px;right:64px;top:390px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+  {miembro(L + "sanchez.jpg", "Dra. Elizabeth Sánchez", "Accesitaria")}
+  {miembro(L + "calderon.jpg", "Dr. Jorge Calderón", "Accesitario")}
+</div>
+<div class="abs card row" style="left:64px;right:64px;top:840px;gap:26px;align-items:center;padding:26px 30px">
+  <div style="flex:none;width:76px;height:76px">{ICON["check"]}</div>
+  <div>
+    <div style="font-weight:900;font-size:30px;line-height:1.15">11 médicos, una sola lista para Lima</div>
+    <div class="body" style="font-size:22px;margin-top:6px">Publicada por el Jurado Electoral Regional del CR III · Periodo 2027 – 2030</div>
+  </div>
+</div>
+<div class="abs swipe" style="right:64px;bottom:90px">Desliza →</div>
+""")
+
 
 def mini(photo, name, role):
     return f"""<div class="center">
@@ -315,7 +334,7 @@ pieces["07_D07_equipo_lima_5-5_cierre"] = page(f"""
 <div class="abs row" style="left:40px;right:40px;top:600px;justify-content:space-between">
   {mini(MUNOZ, "Dr. Danny Muñoz", "Decano Regional")}
   {mini(FALERO, "Dra. Judith Falero", "Secretaría General")}
-  {mini(SOTO, "Dr. Leslie Soto", "Incidencia en Salud Pública")}
+  {mini(L + "soto_t.jpg", "Dr. Leslie Soto", "Incidencia en Salud Pública")}
 </div>
 <div class="abs center" style="left:64px;right:64px;top:1010px;font-weight:800;font-size:28px">
   ¿Eres colegiado en Lima? <span style="background:var(--yellow);padding:2px 12px">Comparte con un colega</span>
@@ -324,33 +343,34 @@ pieces["07_D07_equipo_lima_5-5_cierre"] = page(f"""
 """.replace('class="pill"', 'class="pill" style="bottom:90px;height:140px"'))
 
 # ---------------------------------------------------------------- D-08 ejes
+# Ejes sugeridos en el plan (pendientes de validar), firmados por el secretario afín
 EJES = [
     ("Defensa legal", "permanente", "Asesoría para cada médico",
      "Defensa y asesoría legal permanente para médicos jóvenes y especialistas.",
-     "Foto lateral<br>médico joven en servicio"),
+     L + "zorrilla.jpg", "Dr. Loel Zorrilla", "Secretaría de Asuntos Contenciosos y Administrativos"),
     ("Cuentas claras", "en el CR III", "Transparencia financiera",
      "Rendición de cuentas abierta y periódica del Consejo Regional III.",
-     "Foto lateral<br>reunión / asamblea médica"),
+     L + "rodriguez.jpg", "Dr. Junnyor Rodríguez", "Secretaría de Economía y Finanzas"),
     ("Bienestar", "médico", "Cuidar a quien cuida",
      "Programas de salud ocupacional y capacitación continua para los médicos de Lima.",
-     "Foto lateral<br>capacitación / taller"),
+     L + "vasquez.jpg", "Dra. Eva Vásquez", "Secretaría de Desarrollo Profesional y Científico"),
 ]
 
 
 def eje_page(i, e):
-    t1, t2, tagline, desc, foto = e
+    t1, t2, tagline, desc, photo, name, role = e
     return page(f"""
 {logo()}
 <div class="kicker" style="margin-top:28px">Propuestas para Lima · {i} de 3</div>
 <div style="margin-top:16px">{hl([t1, t2], "")}</div>
-{ph(foto, "fundida a la izquierda", "position:absolute;right:0;top:560px;width:470px;height:520px;border-radius:0;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%)")}
-<div class="abs" style="left:64px;top:610px;width:560px">
+<div class="photo" style="right:0;top:540px;width:460px;height:540px;background-image:url({photo});background-position:center top;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to top,transparent 0,#000 16%);-webkit-mask-composite:source-in"></div>
+<div class="abs" style="left:64px;top:600px;width:560px">
   <span class="tag">Eje {i} · Consejo Regional III</span>
   <div class="h2" style="margin-top:22px">{tagline}.</div>
   <p class="body" style="margin-top:20px">{desc}</p>
   <div class="sign" style="margin-top:30px">
-    <div class="n">Dr. Danny Muñoz</div>
-    <div class="r">Candidato a Decano Regional · Lima</div>
+    <div class="n">{name}</div>
+    <div class="r">{role}</div>
   </div>
 </div>
 {pill("lima")}

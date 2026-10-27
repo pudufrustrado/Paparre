@@ -25,20 +25,21 @@ Esta propuesta sigue la línea gráfica aprobada en la serie 01–24: fondo clar
 
 ## Insumos
 Ya integrados:
-- `req 1`: frame de la entrevista en RPP (La Rotativa del Aire), usado en D-03.
+- `req 1`: frame de la entrevista en RPP, usado en D-03.
 - `req 2`: retratos de Muñoz, Tarazona y Falero, usados en D-05, D-06, D-07 y D-09B.
 - `req 3`: Comité Ejecutivo Nacional, usado en D-09A.
+- `req 5`: fotos del Comité Ejecutivo Regional III Lima, usadas en el carrusel D-07 y en los ejes D-08.
+- `listas lima.jpeg`: publicación del Jurado Electoral Regional CR III, usada en D-05. Muestra solo la lista de Fortaleza Médica y **no incluye la columna de DNI**.
 
-Pendientes (subir a /paparre):
-1. **Recorte de El Peruano** con la resolución de la Lista CR III Lima y su fecha de publicación (D-05).
-2. **Equipo Lima**: nombre y foto de Finanzas, Ética, Asuntos Contenciosos y Acción Médica, más la especialidad y una línea de trayectoria de cada uno (incluidos Falero y Soto) (D-07).
-3. **Fotos laterales** para los ejes de Lima (D-08): médico joven en servicio, una asamblea y una capacitación. Opcional: si no llegan, las cambio por retratos de Muñoz.
-4. **Datos de la asamblea**: fecha, hora y enlace (D-04).
-5. Opcional: el logo en vector (SVG/AI).
-
-La campaña de Lima no tiene redes propias, así que la lámina 5 de D-07 cierra con el equipo y la invitación "Comparte con un colega".
+Decisiones tomadas:
+- D-04 queda como plantilla, porque todavía no hay asamblea programada.
+- D-08: los 3 ejes vienen del plan y son una sugerencia por validar. Cada eje lo firma el secretario afín (Zorrilla, Rodríguez y Vásquez).
+- La campaña de Lima no tiene redes propias, así que D-07 cierra con "Comparte con un colega".
 
 ## Verificar antes de publicar
+- **Secretaría del Médico Joven**: la publicación oficial dice "Dra. Jelsy Sánchez Villogas", pero `req 5` dice "Dr. Víctor Hernández". En el carrusel usé el nombre oficial, con la foto pendiente.
+- **D-05**: la publicación indica que las listas "han superado la etapa de depuración" y que admite tachas hasta el 28 de octubre. Conviene publicar "¡Es oficial!" después de esa fecha, o suavizar el texto.
+- **Cargo de Tarazona**: el plan dice "Coordinador Nacional" y las piezas previas, "Decano Nacional".
 - **D-02**: el plan dice "de 428 firmas… solo validaron 7 y anularon el 70%". 7 de 428 es el 1,6% validado, así que el "70% anulado" no cuadra con esa cifra. Hay que confirmar los dos números.
 - **D-01**: el cuerpo del comunicado es un borrador de redacción y necesita la aprobación del Dr. Tarazona.
 - **"Lista N"**: se mantiene como marcador hasta el sorteo del 4 de noviembre, igual que en la serie aprobada.
