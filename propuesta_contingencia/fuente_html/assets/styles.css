@@ -1,0 +1,227 @@
+@import url(fonts.css);
+
+:root {
+  --navy: #01296F;
+  --navy-ink: #182D6C;
+  --navy-deep: #021E52;
+  --footer: #023979;
+  --yellow: #FEC41B;
+  --purple: #673B92;
+  --bg: #F5F6FB;
+  --band-blue: #E8EDF8;
+  --band-lila: #EFE9F5;
+  --green: #1FA45A;
+  --red: #D7263D;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy-ink);
+  background: var(--bg);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Lienzo 4:5 ---------- */
+.canvas {
+  position: relative;
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background: var(--bg);
+}
+/* Bandas diagonales translúcidas, como en la línea aprobada */
+.canvas::before, .canvas::after {
+  content: "";
+  position: absolute;
+  top: -200px;
+  height: 1900px;
+  transform: rotate(28deg);
+  transform-origin: top left;
+  pointer-events: none;
+}
+.canvas::before { left: 900px; width: 170px; background: var(--band-blue); opacity: .9; }
+.canvas::after  { left: 1080px; width: 210px; background: var(--band-lila); opacity: .85; }
+.canvas > * { position: relative; z-index: 1; }
+
+/* Variante oscura (contingencia / impacto) */
+.canvas.dark { background: radial-gradient(120% 80% at 50% 0%, #0A3C8C 0%, var(--navy) 45%, var(--navy-deep) 100%); color: #fff; }
+.canvas.dark::before { background: rgba(255,255,255,.05); opacity: 1; }
+.canvas.dark::after  { background: rgba(103,59,146,.35); opacity: 1; }
+
+/* ---------- Logo ---------- */
+.logo { display: block; margin: 0 auto; }
+.logo.center { width: 360px; padding-top: 52px; }
+.logo.corner { position: absolute; top: 44px; left: 56px; width: 250px; }
+
+/* ---------- Tipografía ---------- */
+.kicker { font-weight: 600; font-size: 38px; text-align: center; letter-spacing: -.2px; }
+.dark .kicker { color: #fff; }
+.hl { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.hl.left { align-items: flex-start; }
+.hl span {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--navy-ink);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 86px;
+  line-height: 1;
+  padding: 10px 26px 12px;
+  letter-spacing: -1px;
+}
+.hl.md span { font-size: 70px; padding: 9px 22px 10px; }
+.hl.sm span { font-size: 58px; padding: 8px 18px 9px; }
+.hl.xl span { font-size: 112px; padding: 12px 30px 14px; }
+
+.quote { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.quote span {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  background: var(--yellow);
+  color: var(--navy-ink);
+  font-size: 54px;
+  line-height: 1.12;
+  padding: 2px 14px 4px;
+}
+.quote .gm { font-family: 'Montserrat'; font-weight: 800; font-size: 40px; background: none; color: var(--navy-ink); padding: 0 6px 0 0; }
+
+.tag {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--navy-ink);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  padding: 7px 14px;
+}
+.tag.navy { background: var(--navy); color: #fff; }
+.tag.big { font-size: 26px; padding: 9px 18px; }
+
+.h2 { font-weight: 800; font-size: 44px; line-height: 1.08; letter-spacing: -.5px; }
+.body { font-weight: 500; font-size: 28px; line-height: 1.35; }
+.body b { font-weight: 800; }
+.sign { border-left: 6px solid var(--yellow); padding: 2px 0 2px 16px; }
+.sign .n { font-weight: 800; font-size: 28px; }
+.sign .r { font-weight: 500; font-size: 22px; margin-top: 4px; }
+.dark .sign .n, .dark .sign .r { color: #fff; }
+
+/* ---------- Tarjetas ---------- */
+.card {
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 18px 40px rgba(1, 41, 111, .10);
+  padding: 30px 34px;
+}
+.dark .card { color: var(--navy-ink); }
+
+/* ---------- Placeholder de foto / captura ---------- */
+.ph {
+  position: relative;
+  background: linear-gradient(160deg, #D4DCEC 0%, #B9C6DE 55%, #9FB0CF 100%);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.ph::after {
+  content: ""; position: absolute; inset: 16px;
+  border: 3px dashed rgba(1, 41, 111, .35);
+  border-radius: inherit;
+}
+.ph .lbl {
+  position: relative; z-index: 1;
+  text-align: center;
+  font-weight: 800; font-size: 20px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--navy);
+  line-height: 1.5; padding: 0 30px;
+}
+.ph .lbl small { display: block; font-weight: 600; letter-spacing: .5px; font-size: 16px; text-transform: none; opacity: .8; margin-top: 4px; }
+.dark .ph { background: linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,.06)); }
+.dark .ph::after { border-color: rgba(255,255,255,.45); }
+.dark .ph .lbl { color: #fff; }
+/* Silueta para que el placeholder de persona se lea como retrato */
+.ph.person::before {
+  content: "";
+  position: absolute; left: 50%; bottom: -6%;
+  width: 70%; height: 78%;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255,255,255,.55) 0 19%, transparent 19.5%),
+    radial-gradient(ellipse at 50% 100%, rgba(255,255,255,.55) 0 52%, transparent 52.5%);
+}
+.ph.person .lbl { margin-top: -10%; }
+
+/* Foto real con fundido al fondo */
+.photo { position: absolute; background-size: cover; background-position: center top; }
+.fade-l { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%); }
+.fade-r { -webkit-mask-image: linear-gradient(to left, transparent 0, #000 22%); }
+.fade-b { -webkit-mask-image: linear-gradient(to top, transparent 0, #000 18%); }
+.fade-rb { -webkit-mask-image: linear-gradient(to left, transparent 0, #000 18%), linear-gradient(to top, transparent 0, #000 18%); -webkit-mask-composite: source-in; }
+.fade-lb { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 18%), linear-gradient(to top, transparent 0, #000 18%); -webkit-mask-composite: source-in; }
+
+/* ---------- Píldora CTA (29 nov) ---------- */
+.pill {
+  position: absolute; left: 64px; right: 64px; bottom: 108px;
+  height: 152px;
+  background: var(--navy);
+  border-radius: 46px;
+  display: flex; align-items: center;
+  color: #fff;
+  padding: 0 18px 0 44px;
+  box-shadow: 0 16px 36px rgba(1, 41, 111, .25);
+}
+.dark .pill { background: #fff; color: var(--navy-ink); }
+.pill .date { display: flex; align-items: center; gap: 8px; padding-right: 26px; border-right: 3px solid currentColor; height: 116px; }
+.pill .date .este { font-weight: 500; font-size: 26px; margin-right: 4px; }
+.pill .date .d { font-weight: 900; font-size: 86px; letter-spacing: -4px; line-height: 1; }
+.pill .date .m { font-weight: 900; font-size: 30px; line-height: .95; }
+.pill .vote { padding-left: 26px; flex: 1; }
+.pill .vote .a { font-weight: 800; font-size: 26px; }
+.pill .vote .b { font-weight: 900; font-size: 38px; color: var(--yellow); letter-spacing: -.5px; line-height: 1.1; }
+.dark .pill .vote .b { color: var(--navy); }
+.pill .lista {
+  width: 116px; height: 116px;
+  background: var(--yellow);
+  color: var(--navy-ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.pill .lista .t { font-weight: 800; font-size: 17px; letter-spacing: 1px; }
+.pill .lista .n { font-weight: 900; font-size: 64px; line-height: .9; }
+.pill .lista .s { font-weight: 800; font-size: 13px; letter-spacing: .5px; margin-top: 2px; }
+
+/* ---------- Pie de marca ---------- */
+.foot {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 68px;
+  background: var(--footer);
+  color: #fff;
+  display: flex; align-items: center;
+  padding-left: 36px;
+  font-weight: 500; font-size: 22px;
+  overflow: hidden;
+}
+.foot::before, .foot::after {
+  content: ""; position: absolute; top: 0; bottom: 0;
+  transform: skewX(-38deg);
+}
+.foot::before { right: 175px; width: 80px; background: var(--purple); box-shadow: -10px 0 0 #fff; }
+.foot::after  { right: -60px; width: 210px; background: var(--yellow); box-shadow: -10px 0 0 #fff; }
+.dark .foot { background: #fff; color: var(--navy-ink); }
+.dark .foot::before { box-shadow: -10px 0 0 var(--navy); }
+.dark .foot::after { box-shadow: -10px 0 0 var(--navy); }
+
+/* ---------- Utilidades ---------- */
+.abs { position: absolute; }
+.center { text-align: center; }
+.row { display: flex; }
+.yl { color: var(--yellow); }
+.page {
+  position: absolute; top: 58px; right: 56px;
+  font-weight: 700; font-size: 22px; color: var(--navy-ink);
+  background: #fff; border-radius: 40px; padding: 8px 18px;
+  box-shadow: 0 6px 18px rgba(1,41,111,.12);
+}
+.swipe { font-weight: 800; font-size: 24px; letter-spacing: .5px; }
