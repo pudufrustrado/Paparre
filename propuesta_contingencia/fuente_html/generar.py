@@ -79,7 +79,9 @@ ICON = {
     "alert": '<svg viewBox="0 0 24 24" width="64" height="64"><path d="M12 2 23 21H1z" fill="#FEC41B"/><path d="M12 9v5" stroke="#01296F" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.4" r="1.4" fill="#01296F"/></svg>',
 }
 
-TARAZONA = "../assets/tarazona_provisional.jpg"
+TARAZONA = "../assets/tarazona.jpg"
+MUNOZ = "../assets/munoz.jpg"
+FALERO = "../assets/falero.jpg"
 SOTO = "../assets/soto_provisional.jpg"
 
 pieces = {}
@@ -157,9 +159,9 @@ pieces["03_D03_quote_rpp_tarazona"] = page(f"""
 {logo("corner")}
 <div class="abs" style="top:66px;right:56px"><span class="tag big">En medios</span></div>
 <div class="abs" style="left:64px;right:64px;top:200px;height:540px;border-radius:26px;background:var(--navy);padding:14px;box-shadow:0 18px 40px rgba(1,41,111,.18)">
-  {ph("Frame limpio de la entrevista", "Dr. Augusto Tarazona en RPP Noticias · captura 16:9 en alta", "width:100%;height:100%;border-radius:16px")}
+  <div style="width:100%;height:100%;border-radius:16px;background:url(../assets/rpp_frame.jpg) center/cover"></div>
 </div>
-<div class="abs" style="left:96px;top:706px"><span class="tag navy" style="font-size:20px">Entrevista · RPP Noticias</span></div>
+<div class="abs" style="left:96px;top:706px"><span class="tag navy" style="font-size:20px">Entrevista · RPP · La Rotativa del Aire</span></div>
 <div class="abs quote" style="left:64px;right:64px;top:790px">
   <span><b class="gm" style="background:none">«</b>No permitiremos que</span>
   <span>irregularidades dejen sin</span>
@@ -197,7 +199,7 @@ pieces["04_D04_convocatoria_asamblea"] = page(f"""
 
 # ---------------------------------------------------------------- D-05
 pieces["05_D05_lista_lima_inscrita"] = page(f"""
-{ph("Foto Dr. Danny Muñoz", "Retrato recortado · bata blanca · sin fondo", "position:absolute;right:0;top:150px;width:560px;height:930px;border-radius:0;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 25%)", person=True)}
+<div class="photo" style="right:0;top:150px;width:600px;height:930px;background-image:url({MUNOZ});background-position:70% top;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 42%),linear-gradient(to top,transparent 0,#000 22%);-webkit-mask-composite:source-in"></div>
 {logo("corner")}
 <div class="abs" style="left:64px;top:230px"><span class="tag navy big">Lima · Consejo Regional III</span></div>
 <div class="abs" style="left:64px;top:300px">{hl(["¡Es", "oficial!"], "xl", "left")}</div>
@@ -226,8 +228,8 @@ pieces["06_D06_dupla_munoz_tarazona"] = page(f"""
 <div class="kicker" style="margin-top:26px">Unidos por un Colegio Médico</div>
 <div style="margin-top:14px">{hl(["Transparente, digno", "y al servicio", "de los médicos"], "sm")}</div>
 <div class="abs" style="left:0;right:0;top:640px;height:560px">
-  {ph("Foto Dr. Danny Muñoz", "Recorte sin fondo · mirando a la derecha", "position:absolute;left:40px;bottom:0;width:470px;height:560px;border-radius:30px 30px 0 0", person=True)}
-  <div class="photo fade-b" style="right:40px;bottom:0;width:470px;height:560px;background-image:url({TARAZONA});border-radius:30px 30px 0 0;background-size:118%;background-position:30% 0"></div>
+  <div class="photo fade-b" style="left:40px;bottom:0;width:470px;height:560px;background-image:url({MUNOZ});border-radius:30px 30px 0 0;background-size:auto 112%;background-position:46% 0"></div>
+  <div class="photo fade-b" style="right:40px;bottom:0;width:470px;height:560px;background-image:url({TARAZONA});border-radius:30px 30px 0 0;background-size:auto 112%;background-position:24% 0"></div>
   <div class="abs" style="left:40px;bottom:-4px;width:470px;padding:16px 22px;background:var(--navy);color:#fff;border-left:8px solid var(--yellow)">
     <div style="font-weight:800;font-size:27px">Dr. Danny Muñoz</div>
     <div style="font-weight:500;font-size:19px">Candidato a Decano Regional · Lima</div>
@@ -245,7 +247,7 @@ pieces["06_D06_dupla_munoz_tarazona"] = page(f"""
 # ---------------------------------------------------------------- D-07 carrusel
 def ficha(role, name, spec, line, photo=None):
     if photo:
-        img = f'<div style="width:250px;height:300px;border-radius:20px;background:url({photo}) center 8%/cover;flex:none"></div>'
+        img = f'<div style="width:250px;height:300px;border-radius:20px;background:url({photo}) center 0/cover;flex:none"></div>'
     else:
         img = ph("Foto", "recorte", "width:250px;height:300px;border-radius:20px;flex:none", person=True)
     return f"""<div class="card row" style="gap:30px;align-items:center;padding:26px">
@@ -274,7 +276,7 @@ def ficha_page(n, a, b):
 
 
 pieces["07_D07_equipo_lima_1-5_portada"] = page(f"""
-{ph("Foto Dr. Danny Muñoz", "Retrato principal · sin fondo · plano medio", "position:absolute;left:0;right:0;top:330px;height:760px;border-radius:0;-webkit-mask-image:linear-gradient(to top,transparent 0,#000 20%)", person=True)}
+<div class="photo" style="left:0;right:0;top:330px;height:760px;background-image:url({MUNOZ});background-size:auto 100%;background-position:center top;-webkit-mask-image:linear-gradient(to top,transparent 0,#000 22%)"></div>
 {logo()}
 <div class="page">1 de 5</div>
 <div style="margin-top:28px">{hl(["Conoce al equipo", "de Lima"], "md")}</div>
@@ -288,7 +290,7 @@ pieces["07_D07_equipo_lima_1-5_portada"] = page(f"""
 """)
 
 pieces["07_D07_equipo_lima_2-5"] = ficha_page(2,
-    ficha("Secretaría General", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"),
+    ficha("Secretaría General", "Dra. Judith Falero", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]", FALERO),
     ficha("Finanzas", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"))
 pieces["07_D07_equipo_lima_3-5"] = ficha_page(3,
     ficha("Ética", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"),
@@ -297,19 +299,29 @@ pieces["07_D07_equipo_lima_4-5"] = ficha_page(4,
     ficha("Acción Médica", "Dr(a). [Nombre Apellido]", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]"),
     ficha("Incidencia en Salud Pública", "Dr. Leslie Soto", "[Especialidad]", "[Trayectoria en una línea: sede, cargo, años de servicio]", SOTO))
 
+def mini(photo, name, role):
+    return f"""<div class="center">
+  <div style="width:260px;height:300px;border-radius:22px;background:url({photo}) center 0/cover;margin:0 auto;box-shadow:0 14px 30px rgba(1,41,111,.15)"></div>
+  <div style="font-weight:900;font-size:27px;margin-top:16px">{name}</div>
+  <div style="display:inline-block;margin-top:6px" class="tag">{role}</div>
+</div>"""
+
+
 pieces["07_D07_equipo_lima_5-5_cierre"] = page(f"""
 {logo()}
 <div class="page">5 de 5</div>
-<div class="kicker" style="margin-top:40px">Sigue nuestras propuestas para Lima</div>
+<div class="kicker" style="margin-top:40px">Este 29 de noviembre, en Lima</div>
 <div style="margin-top:16px">{hl(["El cambio", "empieza en Lima"], "md")}</div>
-<div class="abs" style="left:64px;right:64px;top:640px;display:grid;grid-template-columns:1fr 1fr;gap:22px">
-  <div class="card"><span class="tag" style="font-size:18px">Facebook</span><div style="font-weight:800;font-size:28px;margin-top:12px">[Fortaleza Médica Lima]</div></div>
-  <div class="card"><span class="tag" style="font-size:18px">Instagram</span><div style="font-weight:800;font-size:28px;margin-top:12px">@[usuario]</div></div>
-  <div class="card"><span class="tag" style="font-size:18px">TikTok</span><div style="font-weight:800;font-size:28px;margin-top:12px">@[usuario]</div></div>
-  <div class="card"><span class="tag" style="font-size:18px">WhatsApp</span><div style="font-weight:800;font-size:28px;margin-top:12px">[+51 900 000 000]</div></div>
+<div class="abs row" style="left:40px;right:40px;top:600px;justify-content:space-between">
+  {mini(MUNOZ, "Dr. Danny Muñoz", "Decano Regional")}
+  {mini(FALERO, "Dra. Judith Falero", "Secretaría General")}
+  {mini(SOTO, "Dr. Leslie Soto", "Incidencia en Salud Pública")}
+</div>
+<div class="abs center" style="left:64px;right:64px;top:1010px;font-weight:800;font-size:28px">
+  ¿Eres colegiado en Lima? <span style="background:var(--yellow);padding:2px 12px">Comparte con un colega</span>
 </div>
 {pill("lima")}
-""")
+""".replace('class="pill"', 'class="pill" style="bottom:90px;height:140px"'))
 
 # ---------------------------------------------------------------- D-08 ejes
 EJES = [
@@ -373,13 +385,13 @@ pieces["08_D08_ejes_lima_resumen"] = page(f"""
 pieces["09_D09A_victoria_lista_nacional"] = page(f"""
 {logo("center", dark=True)}
 <div class="kicker" style="margin-top:30px;color:var(--yellow)">Apelación favorable</div>
-<div style="margin-top:16px">{hl(["¡Triunfó", "la verdad!"], "xl")}</div>
-<div class="center" style="margin:30px 80px 0;font-weight:800;font-size:40px;line-height:1.18">
-  Nuestra Lista Nacional<br>vuelve a la contienda
+<div style="margin-top:16px">{hl(["¡Triunfó", "la verdad!"], "")}</div>
+<div class="center" style="margin:22px 80px 0;font-weight:800;font-size:36px;line-height:1.18">
+  Nuestra Lista Nacional vuelve a la contienda
 </div>
-{ph("Foto del equipo nacional completo", "Grupal · celebración · alta resolución", "position:absolute;left:64px;right:64px;top:770px;height:300px;border-radius:26px")}
-{seal("right:40px;top:690px;transform:rotate(14deg)", 150, 2)}
-<div class="abs" style="left:64px;right:64px;bottom:104px;height:140px;background:var(--yellow);color:var(--navy-ink);border-radius:46px;display:flex;align-items:center;justify-content:center;gap:26px">
+<div class="abs" style="left:56px;right:56px;top:610px;height:505px;background:#fff;border-radius:26px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,.25)"><div style="width:100%;height:100%;border-radius:14px;background:url(../assets/comite_nacional.jpg) center/contain no-repeat"></div></div>
+{seal("right:28px;top:540px;transform:rotate(14deg)", 140, 2)}
+<div class="abs" style="left:64px;right:64px;bottom:90px;height:120px;background:var(--yellow);color:var(--navy-ink);border-radius:46px;display:flex;align-items:center;justify-content:center;gap:26px">
   <div style="font-weight:900;font-size:86px;letter-spacing:-4px">29</div>
   <div style="font-weight:900;font-size:30px;line-height:1">DE<br>NOV.</div>
   <div style="width:3px;height:90px;background:var(--navy)"></div>
@@ -389,13 +401,14 @@ pieces["09_D09A_victoria_lista_nacional"] = page(f"""
 
 # ---------------------------------------------------------------- D-09B
 pieces["10_D09B_cierre_filas_lima"] = page(f"""
-{ph("Foto Dr. Danny Muñoz", "Recorte sin fondo · gesto firme", "position:absolute;right:-20px;top:300px;width:600px;height:800px;border-radius:0;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to top,transparent 0,#000 18%);-webkit-mask-composite:source-in", person=True)}
+<div class="abs" style="right:56px;top:470px;width:430px;height:580px;border-radius:26px;border:8px solid var(--yellow);background:url({MUNOZ}) 46% 0/auto 105% #F5F6FB;box-shadow:0 20px 50px rgba(0,0,0,.35)"></div>
+<div class="abs" style="right:56px;top:1000px;width:430px;padding:12px 20px;background:var(--yellow);color:var(--navy-ink);border-radius:0 0 22px 22px;font-weight:900;font-size:22px;text-align:center">Dr. Danny Muñoz · CR III Lima</div>
 {logo("corner", dark=True)}
 <div class="abs" style="left:64px;top:250px">{hl(["Más firmes", "que nunca"], "", "left")}</div>
-<div class="abs" style="left:64px;top:510px;width:560px;font-weight:800;font-size:44px;line-height:1.15">
+<div class="abs" style="left:64px;top:490px;width:480px;font-weight:800;font-size:42px;line-height:1.15">
   El cambio empieza en <span class="yl">Lima</span> con el Dr. Danny Muñoz
 </div>
-<div class="abs" style="left:64px;top:760px;width:520px;border-left:8px solid var(--yellow);padding-left:22px">
+<div class="abs" style="left:64px;top:780px;width:470px;border-left:8px solid var(--yellow);padding-left:22px">
   <p class="body" style="color:#fff;font-size:27px">No vamos a ceder los consejos regionales a <b>los mismos de siempre</b>. En Lima y en cada región, seguimos de pie.</p>
 </div>
 {pill("lima")}

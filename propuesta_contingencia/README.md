@@ -23,16 +23,20 @@ Esta propuesta sigue la línea gráfica aprobada en la serie 01–24: fondo clar
 | 09 | D-09A | ¡Triunfó la verdad! (si la apelación sale favorable) | Contingencia |
 | 10 | D-09B | Más firmes que nunca (si la apelación es rechazada) | Contingencia |
 
-## Insumos pendientes (subir a /paparre)
-1. **Dr. Danny Muñoz**: 2 o 3 recortes PNG sin fondo con bata blanca (plano medio, mirando al frente y a la derecha). Se usan en D-05, D-06, D-07 (portada) y D-09B.
-2. **Dr. Augusto Tarazona**: recorte PNG sin fondo. Por ahora uso, de forma provisional, el retrato de "X Mesa de trabajo 1 copia 11".
-3. **Captura de RPP**: frame limpio de la entrevista en 16:9 (D-03).
-4. **Recorte de El Peruano** con la resolución de la Lista CR III Lima y su fecha de publicación (D-05).
-5. **Equipo Lima**: nombre, cargo, especialidad, una línea de trayectoria y un recorte por cada cargo (Secretaría General, Finanzas, Ética, Asuntos Contenciosos y Acción Médica). La ficha del Dr. Leslie Soto ya usa su foto de "copia 10".
-6. **Foto grupal del equipo nacional** (D-09A).
-7. **Fotos laterales** para los ejes de Lima (D-08): médico joven en servicio, una asamblea y una capacitación.
-8. **Datos de la asamblea**: fecha, hora y enlace (D-04). También las redes oficiales de la lista Lima (D-07, lámina 5).
-9. **Logo vectorial** (SVG/AI). El que se usa ahora es un recorte de las piezas existentes.
+## Insumos
+Ya integrados:
+- `req 1`: frame de la entrevista en RPP (La Rotativa del Aire), usado en D-03.
+- `req 2`: retratos de Muñoz, Tarazona y Falero, usados en D-05, D-06, D-07 y D-09B.
+- `req 3`: Comité Ejecutivo Nacional, usado en D-09A.
+
+Pendientes (subir a /paparre):
+1. **Recorte de El Peruano** con la resolución de la Lista CR III Lima y su fecha de publicación (D-05).
+2. **Equipo Lima**: nombre y foto de Finanzas, Ética, Asuntos Contenciosos y Acción Médica, más la especialidad y una línea de trayectoria de cada uno (incluidos Falero y Soto) (D-07).
+3. **Fotos laterales** para los ejes de Lima (D-08): médico joven en servicio, una asamblea y una capacitación. Opcional: si no llegan, las cambio por retratos de Muñoz.
+4. **Datos de la asamblea**: fecha, hora y enlace (D-04).
+5. Opcional: el logo en vector (SVG/AI).
+
+La campaña de Lima no tiene redes propias, así que la lámina 5 de D-07 cierra con el equipo y la invitación "Comparte con un colega".
 
 ## Verificar antes de publicar
 - **D-02**: el plan dice "de 428 firmas… solo validaron 7 y anularon el 70%". 7 de 428 es el 1,6% validado, así que el "70% anulado" no cuadra con esa cifra. Hay que confirmar los dos números.
