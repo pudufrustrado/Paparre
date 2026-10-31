@@ -409,14 +409,19 @@ pieces["08_D08_ejes_lima_resumen"] = page(f"""
 
 # ---------------------------------------------------------------- D-09A
 pieces["09_D09A_victoria_lista_nacional"] = page(f"""
-{logo("center", dark=True)}
-<div class="kicker" style="margin-top:30px;color:var(--yellow)">Apelación favorable</div>
-<div style="margin-top:16px">{hl(["¡Triunfó", "la verdad!"], "")}</div>
-<div class="center" style="margin:22px 80px 0;font-weight:800;font-size:36px;line-height:1.18">
-  Nuestra Lista Nacional vuelve a la contienda
+{logo("corner", dark=True)}
+<div class="abs" style="right:56px;top:96px;width:390px;height:470px;border-radius:26px;border:8px solid var(--yellow);background:#F5F6FB url({TARAZONA}) 28% 0/cover;box-shadow:0 20px 50px rgba(0,0,0,.35)"></div>
+<div class="abs" style="right:56px;top:500px;width:390px;padding:12px 18px;background:var(--yellow);color:var(--navy-ink);border-radius:0 0 22px 22px;text-align:center">
+  <div style="font-weight:900;font-size:27px;line-height:1.1">Dr. Augusto Tarazona</div>
+  <div style="font-weight:700;font-size:19px;margin-top:2px">Candidato a Decano Nacional</div>
+</div>
+<div class="abs" style="left:64px;top:190px;width:560px">
+  <div class="kicker" style="text-align:left;color:var(--yellow);font-size:34px">Apelación favorable</div>
+  <div style="margin-top:14px">{hl(["¡Triunfó", "la verdad!"], "md", "left")}</div>
+  <div style="margin-top:22px;font-weight:800;font-size:34px;line-height:1.18">Nuestra Lista Nacional<br>vuelve a la contienda</div>
 </div>
 <div class="abs" style="left:56px;right:56px;top:610px;height:505px;background:#fff;border-radius:26px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,.25)"><div style="width:100%;height:100%;border-radius:14px;background:url(../assets/comite_nacional.jpg) center/contain no-repeat"></div></div>
-{seal("right:28px;top:540px;transform:rotate(14deg)", 140, 2)}
+{seal("left:26px;top:556px;transform:rotate(-12deg)", 116, 2)}
 <div class="abs" style="left:64px;right:64px;bottom:90px;height:120px;background:var(--yellow);color:var(--navy-ink);border-radius:46px;display:flex;align-items:center;justify-content:center;gap:26px">
   <div style="font-weight:900;font-size:86px;letter-spacing:-4px">29</div>
   <div style="font-weight:900;font-size:30px;line-height:1">DE<br>NOV.</div>
